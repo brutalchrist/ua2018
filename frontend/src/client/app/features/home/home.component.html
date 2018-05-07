@@ -1,0 +1,15 @@
+<div class="content" *ngIf="indicators">
+    <h2>{{ indicators.nombre }}</h2>
+    <table class="table">
+        <thead>
+            <th>Fecha</th>
+            <th>Valor</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let indicator of indicators.serie">
+                <td>{{ indicator.fecha }}</td>
+                <td>{{ indicator.valor }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
