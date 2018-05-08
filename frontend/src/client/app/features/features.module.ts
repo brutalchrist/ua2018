@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { TestComponent } from './test/test.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
 import { CommonModule } from '@angular/common';
@@ -14,8 +13,8 @@ import { DirectivesModule } from '../directives/directives.module';
 
 @NgModule({
     imports: [CommonModule, RouterModule, SharedModule, PipesModule, DirectivesModule],
-    declarations: [HomeComponent, IndexComponent, TestComponent],
-    exports: [CommonModule, FormsModule, RouterModule, HomeComponent, IndexComponent, TestComponent]
+    declarations: [HomeComponent, IndexComponent],
+    exports: [CommonModule, FormsModule, RouterModule, HomeComponent, IndexComponent]
 })
 export class FeaturesModule {
 }

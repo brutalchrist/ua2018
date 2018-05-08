@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 20px;
+
+    select, button, table, .loading {
+        margin-top: 10px;
+    }
+
+    .loading {
+        text-align: center;
+    }
+}

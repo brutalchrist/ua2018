@@ -1,15 +1,21 @@
-<div class="content" *ngIf="indicators">
-    <h2>{{ indicators.nombre }}</h2>
-    <table class="table">
+<div class="content">
+    <select class="custom-select" (change)="setYear(selectElem.value)" #selectElem>
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+    </select>
+    <button (click)="getUf()">Get UF</button>
+    <table class="table" *ngIf="uf">
         <thead>
-            <th>Fecha</th>
-            <th>Valor</th>
+            <th scope="col">#</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Valor</th>
         </thead>
         <tbody>
-            <tr *ngFor="let indicator of indicators.serie">
-                <td>{{ indicator.fecha }}</td>
-                <td>{{ indicator.valor }}</td>
+            <tr *ngFor="let element of uf.serie.reverse(); let i = index">
+                <th scope="col">{{ i + 1 }}</th>
+                <td>{{ element.fecha | date }}</td>
+                <td>{{ element.valor | currency }}</td>
             </tr>
         </tbody>
     </table>
+    <h3 class="loading" *ngIf="loading">Cargando...</h3>
 </div>

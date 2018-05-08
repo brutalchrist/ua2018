@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MindicadorService } from './mindicador/mindicador.service';
-import { IndicatorsService } from './indicators/indicators.service';
+import { IndicatorService } from './indicator/indicator.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -11,7 +10,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
     imports: [CommonModule, RouterModule],
     declarations: [],
-    providers:[IndicatorsService, MindicadorService],
+    providers: [IndicatorService],
     exports: [CommonModule, FormsModule, RouterModule]
 })
 export class ServicesModule {
